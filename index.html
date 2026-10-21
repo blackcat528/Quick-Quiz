@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Quiz</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <main class="container">
+
+    <!-- Screen 1: enter name -->
+  <div id="start-screen" class="start-wrap screen active">
+
+  <section class="card shown name-card">
+    <div class="emoji">🧠</div>
+    <h1>اختبار سريع</h1>
+    <p class="subtitle">أدخل اسمك للبدء</p>
+    <p class="note">⚠️ يمكن لكل لاعب اللعب مرة واحدة فقط، فاكتب اسمك بشكل صحيح.</p>
+    <input id="player-name" type="text" placeholder="اكتب اسمك هنا" maxlength="20" autocomplete="off">
+    <p id="name-error" class="error"></p>
+    <button id="start-btn" class="btn primary">ابدأ</button>
+  </section>
+
+  <aside class="card shown info-card">
+    <div class="info-label">عدد الذين لعبوا</div>
+    <div id="play-count" class="play-count">0</div>
+    <div class="team-title">سنة أولى ماستر</div>
+    <ul class="team">
+       <li>بن موفق عدلان</li>
+  <li>يزيد عبد الرحمان</li>
+  <li>مهدي بن إدريس</li>
+  <li>لحسن</li>
+    </ul>
+  </aside>
+
+</div>n>
+
+    <!-- Screen 2: questions -->
+    <section id="game-screen" class="card screen">
+      <div class="top-row">
+        <span id="player-label"></span>
+        <span id="progress"></span>
+      </div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+      <div id="timer" class="timer">15</div>
+      <h2 id="question"></h2>
+      <div id="options" class="options"></div>
+      <p id="feedback"></p>
+    </section>
+
+    <!-- Screen 3: results and podium -->
+    <section id="end-screen" class="card wide screen">
+      <div class="emoji" id="end-emoji"></div>
+      <h1>Quiz finished!</h1>
+      <p id="final-score" class="score"></p>
+      <p id="my-rank" class="subtitle"></p>
+      <p id="winner-msg" class="winner-msg"></p>
+      <div id="podium" class="podium"></div>
+      <button id="restart-btn" class="btn primary">Play Again</button>
+    </section>
+
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
